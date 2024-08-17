@@ -9,16 +9,16 @@
     </div>
     <div class="col-sm-12 col-md-2">
         <div class="form-group">
-            <label>Idade <i class="fa-solid fa-calendar"></i></label>
-            <input type="text" class="form-control idade" name="idade" placeholder=""  autocomplete="off" required>
+            <label>Data de Nascimento <i class="fa-solid fa-calendar"></i></label>
+            <input type="date" class="form-control" value="<?= date('Y-m-d')?>" name="idade" placeholder=""  autocomplete="off" required>
         </div>
     </div>
     <div class="col-sm-12 col-md-2">
         <div class="form-group">
             <label>Sexo <i class="fa-solid fa-user-group"></i></label>
             <select class="form-control" name="sexo">
-                <option value="M">MENINO</option>
-                <option value="F">MENINA</option>
+                <option value="M">MASCULINO</option>
+                <option value="F">FEMININO</option>
             </select>
         </div>
     </div>

@@ -270,7 +270,7 @@ $('body').delegate('#form-login', 'submit', function (e) {
         dataType: 'json',
         url: 'login/logar',
         success: function (data) {
-            if (data.status == 'erro-form') {
+            if (data.status == 'erro-form' || data.status == false) {
                 toastr.error(data.mensagem);
                 return;
             }

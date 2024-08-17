@@ -4,17 +4,21 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Login extends CI_Controller
+{
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
     }
 
-    public function index() {
+    public function index()
+    {
         $this->load->view('login');
     }
 
-    public function logar() {
+    public function logar()
+    {
         $this->form_validation->set_rules('usuario', 'usuario', 'required|trim|max_length[30]');
         $this->form_validation->set_rules('senha', 'senha', 'required|max_length[30]');
 
@@ -24,13 +28,12 @@ class Login extends CI_Controller {
         } else {
 
             $usuario = $this->bd->getBy(
-                    'usuarios',
-                    [
-                        'usuario' => $this->input->post('usuario', TRUE),
-                        'senha' => md5($this->input->post('senha', TRUE)),
-                    ]
+                'usuarios',
+                [
+                    'usuario' => $this->input->post('usuario', TRUE),
+                    'senha' => md5($this->input->post('senha', TRUE)),
+                ]
             );
-
             if (empty($usuario)) {
                 echo json_encode(['status' => false, 'mensagem' => 'Por favor, verifique o seu usuário ou senha']);
             } else {
@@ -40,7 +43,8 @@ class Login extends CI_Controller {
         }
     }
 
-    public function logout() {
+    public function logout()
+    {
         $this->session->sess_destroy();
         redirect(); // Assumindo que você tem um controlador chamado 'Login'.
     }

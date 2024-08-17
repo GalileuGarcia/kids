@@ -27,11 +27,11 @@
 			<div class="tab-content mt-2">
 				<div class="tab-pane fade" id="tab2">
 					<form id="form-cadastro">
-						<?php $this->load->view('mdl_cadastro'); ?>	
+						<?php $this->load->view('commons/mdl_cadastro'); ?>	
 					</form>
 				</div>
 				<div class="tab-pane fade show active" id="tab1">
-					<?php $this->load->view('mdl_criancas'); ?>
+					<?php $this->load->view('commons/mdl_criancas'); ?>
 				</div>
 				<div class="modal fade" id="webcamModal" tabindex="-1" aria-labelledby="webcamModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg">

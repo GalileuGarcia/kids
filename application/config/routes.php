@@ -7,4 +7,6 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['cadastrar'] = 'Cadastrar/cadastro';
 $route['painel'] = 'Painel/tela';
+$route['logout'] = 'Login/logout';
+
 

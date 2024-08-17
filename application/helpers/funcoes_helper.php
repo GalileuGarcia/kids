@@ -20,11 +20,11 @@ function calcularIdade($dataNascimento) {
 
 function sala($idade) {
 
-	if ($idade < 3) {
+	if (calcularIdade($idade) < 3) {
 		return 'BABY';
-	} else if ($idade >= 3 and $idade <= 6) {
+	} else if (calcularIdade($idade) >= 3 and calcularIdade($idade) <= 6) {
 		return 'KIDS 1';
-	} else if ($idade >= 7) {
+	} else if (calcularIdade($idade) >= 7) {
 		return 'KIDS 2';
 	}
 }

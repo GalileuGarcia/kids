@@ -23,7 +23,7 @@
         <link href="<?= base_url('assets/css/toastr.css') ?>" rel="stylesheet">
         <style>
             .modal-xxl {
-                max-width: 80%; /* Adjust this percentage as needed */
+                max-width: 94%; /* Adjust this percentage as needed */
             }
             .selectize-dropdown {
                 display: none !important;
@@ -99,11 +99,13 @@
                         <i class="fas fa-user"></i>
                         <span>Cadastro de Criança</span>
                     </a>
+                    <?php if (!empty($this->session->userdata('usuario'))) { ?>
                     <hr class="sidebar-divider">
                     <a class="nav-link" href="<?= base_url('painel') ?>">
                         <i class="fas fa-user"></i>
                         <span>Crianças</span>
                     </a>
+                    <?php } ?>
                 </li>
 
                 <!-- Divider -->

@@ -16,7 +16,14 @@ use Proner\PhpPimaco\Tag;
  */
 
 class Impressao extends CI_Controller {
-
+    
+    public function __construct() {
+        parent::__construct();
+        if (empty($this->session->userdata('usuario'))) {
+            redirect('cadastrar');
+        }
+    }
+    
     public function index() {
         $modelo2col = 'A4263';
         $modelo1col = 'A4262';
@@ -57,7 +64,7 @@ class Impressao extends CI_Controller {
                         . "</style>"
 						. "<br>"	
                         . "<p style='margin-top: 0%'>NOME: ".$crianca['nome']."</p>"
-						. "<p style='margin-top: 0%'>IDADE: ".$crianca['idade']." ANOS</p>"
+						. "<p style='margin-top: 0%'>IDADE: ".calcularIdade($crianca['idade'])." ANOS</p>"
 						. "<p style='margin-top: 0%'>FONE: ".$responsavel['contato']."</p>"
                         
                 );

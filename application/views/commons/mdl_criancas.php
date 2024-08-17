@@ -61,7 +61,7 @@
 			</div>
 			<div class="modal-body">
 					<form id="editar-form-cadastro">
-						<?php $this->load->view('mdl_cadastro'); ?>	
+						<?php $this->load->view('commons/mdl_cadastro'); ?>	
 					</form>
 			</div>
 		</div>

@@ -17,7 +17,7 @@
             <div class="card">
                 <div class="card-body">
                     <form id="form-cadastro">
-                        <?php $this->load->view('mdl_criancas'); ?>	
+                        <?php $this->load->view('commons/mdl_criancas'); ?>	
                     </form>
                 </div>
             </div>
