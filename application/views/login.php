@@ -45,7 +45,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100" style="height: 60px; margin-top: 15px">ACESSAR SISTEMA</button>
+                    <button type="submit" class="btn btn-primary w-100" style="margin-top: 15px">ACESSAR SISTEMA</button>
                 </form>
             </div>
         </div>
